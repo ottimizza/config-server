@@ -34,6 +34,10 @@ spring:
         platform: org.hibernate.dialect.PostgreSQLDialect
         url: jdbc:postgresql://ec2-54-235-86-226.compute-1.amazonaws.com:5432/d6k3mh7iegl2mj?useSSL=true&ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory
     jpa:
+        properties:
+            hibernate:
+                temp:
+                    use_jdbc_metadata_defaults: false
         database-platform: org.hibernate.dialect.PostgreSQLDialect
         generate-ddl: false
         hibernate:
