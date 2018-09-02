@@ -31,7 +31,7 @@ spring:
         driver-class-name: org.postgresql.Driver
         username: tieyiexrpkzxop
         password: 'db828c317d53f062b56aecf8af7230898083a7cbd96f5e3e069beb24052837c7'
-        platform: org.hibernate.dialect.PostgreSQLDialect
+        platform: postgresql
         url: jdbc:postgresql://ec2-54-235-86-226.compute-1.amazonaws.com:5432/d6k3mh7iegl2mj?useSSL=true
     jpa:
         database-platform: org.hibernate.dialect.PostgreSQLDialect
