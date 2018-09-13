@@ -3,7 +3,7 @@ server:
 
 eureka:
   instance:
-    hostname: https://ottimizza-eureka-server.herokuapp.com
+    hostname: ottimizza-eureka-server.herokuapp.com
   client:
     registerWithEureka: true
     fetchRegistry: false
