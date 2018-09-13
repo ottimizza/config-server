@@ -1,5 +1,5 @@
 server:
-  port: 9091
+  port: 9090
 
 eureka:
   instance:
@@ -9,6 +9,6 @@ eureka:
     fetchRegistry: false
     serviceUrl:
       # defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-      defaultZone: http://${eureka.instance.hostname}/eureka/
+      defaultZone: ${eureka.instance.hostname}/eureka/
   server:
     wait-time-in-ms-when-sync-empty: 3000
