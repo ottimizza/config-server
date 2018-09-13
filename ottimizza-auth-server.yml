@@ -1,4 +1,3 @@
-
 server:
   port: 9092
 
@@ -14,32 +13,20 @@ eureka:
   server:
     wait-time-in-ms-when-sync-empty: 3000
 
-security:
-    oauth2:
-        client:
-            access-token-validity-seconds: 1800
-            authorized-grant-types: password,refresh_token,client_credentials
-            client-id: coderef
-            client-secret: $2a$10$p9Pk0fQNAQSesI4vuvKA0OZanDD2
-            resource-ids: resources
-            scope: read,write
-
 spring:
-    datasource:
-        data: classpath:/sql/data.sql
-        schema: classpath:/sql/schema.sql
-        driver-class-name: org.postgresql.Driver
-        username: tieyiexrpkzxop
-        password: 'db828c317d53f062b56aecf8af7230898083a7cbd96f5e3e069beb24052837c7'
-        platform: org.hibernate.dialect.PostgreSQLDialect
-        url: jdbc:postgresql://ec2-54-235-86-226.compute-1.amazonaws.com:5432/d6k3mh7iegl2mj?useSSL=true&ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory
-    jpa:
-        properties:
-            hibernate:
-                temp:
-                    use_jdbc_metadata_defaults: false
-        database-platform: org.hibernate.dialect.PostgreSQLDialect
-        generate-ddl: false
-        hibernate:
-            ddl-auto: none
-        show-sql: true
+	datasource:
+		url: jdbc:postgresql://ec2-54-235-86-226.compute-1.amazonaws.com:5432/d6k3mh7iegl2mj?useSSL=true&ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory
+		username: tieyiexrpkzxop
+		password: db828c317d53f062b56aecf8af7230898083a7cbd96f5e3e069beb24052837c7
+		driver-class-name: org.postgresql.Driver
+
+	jpa:
+		hibernate:
+			ddl-auto: update
+		show-sql: true		
+
+security:
+	oauth2:
+		resource:
+			filter-order: 3
+
