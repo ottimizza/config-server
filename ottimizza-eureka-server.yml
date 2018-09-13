@@ -1,6 +1,9 @@
 server:
   ${PORT:5000}
-
+security:
+  user:
+    password: ${eureka.password}
+    
 eureka:
   instance:
     hostname: localhost
@@ -10,5 +13,6 @@ eureka:
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
       # defaultZone: https://${eureka.instance.hostname}/eureka/
+  password: ${EUREKA_USER_PASSWORD:password}
   server:
     wait-time-in-ms-when-sync-empty: 3000
