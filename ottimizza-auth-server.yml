@@ -4,6 +4,7 @@ server:
 eureka:
   instance:
     hostname: ottimizza-auth-server.herokuapp.com
+    nonSecurePort: 80
   client:
     registerWithEureka: true
     fetchRegistry: false
