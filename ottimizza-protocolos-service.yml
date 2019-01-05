@@ -40,8 +40,8 @@ security:
     
   oauth2:
     client:
-      clientId: ottimizza-protocolos-client
-      clientSecret: ottimizza-protocolos-secret
+      clientId: devglan-client
+      clientSecret: devglan-secret
       accessTokenUri: http://localhost:9092/oauth/token
       userAuthorizationUri: http://localhost:9092/oauth/authorize
     resource:
