@@ -43,15 +43,15 @@ security:
     
   oauth2:
     client:
-      clientId: devglan-client
-      clientSecret: devglan-secret
-      accessTokenUri: http://localhost:9092/oauth/token
-      userAuthorizationUri: http://localhost:9092/oauth/authorize
-      tokenName: oauth_token
-      authenticationScheme: query
-      clientAuthenticationScheme: form
+      client-id: devglan-client
+      client-secret: devglan-secret
+      access-token-uri: http://localhost:9092/oauth/token
+      user-authorization-uri: http://localhost:9092/oauth/authorize
+      token-name: oauth_token
+      authentication-scheme: query
+      client-authentication-scheme: form
     resource:
-      userInfoUri: http://localhost:9092/user
+      user-info-uri: http://localhost:9092/user
       
 spring:
   thymeleaf:
