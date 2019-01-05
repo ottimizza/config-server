@@ -45,8 +45,8 @@ security:
     client:
       client-id: devglan-client
       client-secret: devglan-secret
-      access-token-uri: http://localhost:9092/oauth/token
-      user-authorization-uri: http://localhost:9092/oauth/authorize
+      access-token-uri: ${security.oauth2.client.client-id}:${security.oauth2.client.client-secret}@http://localhost:9092/oauth/token
+      user-authorization-uri: ${security.oauth2.client.client-id}:${security.oauth2.client.client-secret}@http://localhost:9092/oauth/authorize
       token-name: oauth_token
       authentication-scheme: query
       client-authentication-scheme: form
