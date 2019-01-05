@@ -1,6 +1,9 @@
 server:
   port: 9093
-
+  
+  session:
+    cookie:
+      name: UISESSION
 eureka:
   instance:
     hostname: localhost
@@ -46,3 +49,7 @@ security:
       userAuthorizationUri: http://localhost:9092/oauth/authorize
     resource:
       userInfoUri: http://localhost:9092/user
+      
+spring:
+  thymeleaf:
+    cache: false        
